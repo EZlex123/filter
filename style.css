@@ -15,9 +15,12 @@ body {
 	max-width: 320px;
 	width: 100%;
 	margin: 80px auto 30px;
+	display: flex;
+	flex-direction: row;
 }
 .select-btn {
 	display: flex;
+	min-width: 320px;
 	height: 50px;
 	align-items: center;
 	justify-content: space-between;
@@ -49,18 +52,25 @@ body {
 	transform: rotate(-180deg);
 }
 .list-items {
+	top: 50px;
+	right: 30em;
+	margin-right: 10px;
 	position: relative;
+	min-width: 320px;
 	margin-top: 15px;
 	border-radius: 8px;
 	padding: 16px;
 	background-color: #fff;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-	display: none;
+	opacity: 0;
 	overflow-y: auto;
 	max-height: 320px;
+	transform: translateY(-30px);
+	transition: 0.2s ease-in-out;
 }
 .select-btn.open ~ .list-items {
-	display: block;
+	opacity: 1;
+	transform: translateY(0px);
 }
 .list-items .item {
 	display: flex;
